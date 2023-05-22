@@ -26,6 +26,11 @@ body {
     margin: calc(4 * var(--u));
 }
 
+p {
+    margin-left: calc(2 * var(--u));
+    margin-right: calc(2 * var(--u));
+}
+
 .flex-cont {
     display: flex;
     align-items: center;
@@ -73,7 +78,8 @@ code p, code span {
 /* EXAMPLES */
 
 .example {
-    margin-top: calc(2 * var(--u));
+    margin: calc(2 * var(--u));
+    margin-bottom: 0;
     text-align: center;
     font-size: min(10vw, 100px); /* from 6.5REM */
     background-color: var(--ex);
@@ -107,7 +113,8 @@ code p, code span {
 
 .example-image {
     width: 100%;
-    margin-bottom: calc(2 * var(--u));
+    margin: calc(2 * var(--u));
+    margin-top: 0;
 }
 
 #e-kerning-normal {
