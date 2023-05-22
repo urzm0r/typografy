@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+
+    /* units */
+    --u: 10px;
+
+    /* colors */
+    --wt: #eee;
+    --bl: #151515;
+    --ex: rgba(0,0,255,0.25);
+
+    /* colors: code */
+    --c-att: hsl(200, 73%, 75%);
+    --c-val: hsl(39, 73%, 75%);
+    --c-com: rgb(184, 184, 184);
+}
+
+body {
+    background-color: var(--wt);
+    margin: calc(4 * var(--u));
+}
+
+.flex-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-comment {
+    color: var(--c-com);
+}
+
+.c-att {
+    color: var(--c-att);
+}
+
+.c-val {
+    color: var(--c-val);
+}
+
+h1, h2, h3,h4 p:not([class^='c-']), code {
+    color: var(--bl);
+    display: block;
+}
+
+h1, h2, h3,h4 {
+    text-align: center;
+    margin: calc(2 * var(--u));
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+code {
+    background-color: var(--bl);
+    color: var(--wt);
+    margin: calc(2 * var(--u));
+    padding: calc(2 * var(--u));
+}
+
+code p, code span {
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+/* EXAMPLES */
+
+.example {
+    margin-top: calc(2 * var(--u));
+    text-align: center;
+    font-size: min(10vw, 100px); /* from 6.5REM */
+    background-color: var(--ex);
+}
+
+#e-lig-normal {
+    font-variant-ligatures: normal;
+}
+
+#e-lig-none {
+    font-variant-ligatures: none;
+}
+
+#e-leading-1 {
+    font-size: 1.625rem;
+    line-height: 2.5;
+}
+
+#e-leading-2 {
+    font-size: 1.625rem;
+    line-height: 1;
+}
+
+#e-tracking-normal {
+    letter-spacing: normal;
+}
+
+#e-tracking-none {
+    letter-spacing: 20px;
+}
+
+.example-image {
+    width: 100%;
+    margin-bottom: calc(2 * var(--u));
+}
+
+#e-kerning-normal {
+    font-kerning: normal;
+}
+
+#e-kerning-normal, #e-kerning-none {
+    font-family: serif;
+}
+
+#e-kerning-none {
+    font-kerning: none;
+}
+

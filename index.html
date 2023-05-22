@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Typografia dla 16052023</title>
+</head>
+<body>
+    <h1>Typografia</h1>
+
+    <h2>Czcionki i fonty</h2>
+
+    <h3>Pismo</h3>
+    <p><b>Pismo</b> to umowny system znaków służący do przedstawiania mowy. Pismo składa się ze znaków. Znaki nie mają określonego kształtu, ale posiadają ogólną strukturę. Przykładem pisma jest <b>pismo łacińskie</b>.</p>
+
+    <h3>Krój pisma</h3>
+    <p><b>Krój pisma</b> składa się z glifów przedstawiających znaki pisma. Glify mają ściśle określone kształty. Przykładem kroju pisma jest <b>Comic Sans</b> lub <b>Times New Roman</b>.</p>
+
+    <h3>Czcionka</h3>
+    <p>Czcionka to metalowy prostopadłościan dawniej używany w drukarstwie do odbijania na papierze danego glifu pochodzącego z kroju pisma.</p>
+
+    <h3>Font</h3>
+    <p>Font to plik służący do używania kroju pisma na komputerze. Nie należy nazywać fontów czcionkami. Fonty mogą przedstawiać jedną z odmian danego kroju ( np. pogrubioną ). Przykładem fontu jest <b>Arial.ttf</b> lub <b>Roboto-bold.ttf.</b></p>
+
+
+    <h2>Budowa liter</h2>
+
+        <h3>Wydłużenie górne ( Ascender )</h3>
+        <div class="flex-cont">
+            <img src="img/examples/ascender.svg" alt="" class="example-image">
+        </div>
+
+        <p>Element litery który wychodzi ponad MEDIAN</p>
+
+        <h3>Wydłużenie dolne ( Descender )</h3>
+        <div class="flex-cont">
+            <img src="img/examples/descender.svg" alt="" class="example-image">
+        </div>
+
+        <p>Element który wychodzi poniżej linii podstawowej</p>
+
+        <h3>Ligatura</h3>
+
+        <p>Ligatura to graficzne połączenie dwóch znaków. Jest używana do poprawienia czytelności lub w celach estetycznych.</p>
+
+        
+        <p class="example" id="e-lig-normal">
+            fi fl ffi ffl
+        </p>
+        <code>
+            <p class="c-comment">//domyślne ligatury:</p>
+            <p class="c-code"><span class="c-att">font-variant-ligatures</span>: <span class="c-val">normal</span>; </p>
+        </code>
+        <hr>
+        <p class="example" id="e-lig-none">
+            fi fl ffi ff
+        </p>
+        <code>
+            <p class="c-comment">//całkowity brak ligatur:</p>
+            <p class="c-code"><span class="c-att">font-variant-ligatures</span>: <span class="c-val">none</span>;</p>
+        </code>
+        <hr>
+
+        <h4>Szeryf ( Serif )</h4>
+
+        <p>Ozdoba znaku występująca w szeryfowych czcionkach.</p>
+
+        <p class="font"></p>
+
+
+
+    <h2>Podział linii tekstu</h2>
+
+        <h3>Linia podstawowa ( Baseline )</h3>
+
+        <img src="img/examples/baseline.svg" alt="" class="example-image">
+
+
+        <p>Wysokość na której wizualnie osadzone są litery</p>
+
+        <h3>Linia średnia ( Mean line )</h3>
+
+        <img src="img/examples/mean-line.svg" alt="" class="example-image">
+
+        <p>Linia określająca wysokość małych liter</p>
+
+        <h3>wysokość x ( X-height )</h3>
+
+        <img src="img/examples/x-height.svg" alt="" class="example-image">
+
+        <p>Odległość między linią bazową a linią środkową. Przy dobieraniu czcionki używanej przy małym tekście warto wybrać czcionkę z większą wysokością x, aby poprawić czytelność.</p>
+
+        <h3>Wysokość wersalików ( Cap height )</h3>
+
+        <img src="img/examples/cap-height.svg" alt="" class="example-image">
+
+        <p>Linia określająca maksymalną graficzną wysokość wersalików ( dużych liter ).</p>
+
+        <h3>Linia górna ( Ascender height )</h3>
+
+        <img src="img/examples/ascender-height.svg" alt="" class="example-image">
+        
+        <p>Wydłużenia małych liter często sięgają wyżej niż duże litery. Linia górna określa ich wysokość.</p>
+        <!-- todo: overshoot -->
+    <h2>Odstępy</h2>
+
+        <h3>Interlinia ( Leading )</h3>
+        <p>Odległość pomiędzy liniami bazowymi dwóch linijek tekstu.</p>
+        <p class="example" id="e-leading-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sapiente animi similique necessitatibus velit voluptates quas. Consectetur suscipit veritatis impedit natus!</p>
+        <code>
+            <p class="c-code"><span class="c-att">line-height</span>: <span class="c-val"> 1.5</span>;</p>
+        </code>
+        <p class="example" id="e-leading-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sapiente animi similique necessitatibus velit voluptates quas. Consectetur suscipit veritatis impedit natus!</p>
+        <code>
+            <p class="c-code"><span class="c-att">line-height</span>: <span class="c-val"> 1</span>;</p>
+        </code>
+
+        <h3>Kerning</h3>
+        <p>Odstęp pomiędzy poszczególnymi literami</p>
+        <p class="example" id="e-kerning-normal">
+            VA, WA.
+        </p>
+        <code>
+            <p class="c-comment">//domyślny dla czcionki kerning</p>
+            <p class="c-code"><span class="c-att">font-kerning</span>: <span class="c-val"> normal</span>;</p>
+        </code>
+        
+        <p class="example" id="e-kerning-none">
+            VA, WA.
+        </p>
+        <code>
+            <p class="c-comment">//kerning czcionki wyłączony</p>
+            <p class="c-code"><span class="c-att">font-kerning</span>: <span class="c-val">none</span>;</p>
+        </code>
+
+        <h3>Tracking ( Letter spacing )</h3>
+        <p>Równy odstęp pomiędzy wszystkimi literami</p>
+        <p class="example" id="e-tracking-normal">wróżbita</p>
+        <code>
+            <p class="c-comment">/*domyślny tracking*/</p>
+            <p class="c-code"><span class="c-att">letter-spacing</span>: <span class="c-val">normal</span>;</p>
+        </code>
+        
+        <p class="example" id="e-tracking-none">wróżbita</p>
+        <code>
+            <p class="c-comment">/*zmieniony tracking*/</p>
+            <p class="c-code"><span class="c-att">letter-spacing</span>: <span class="c-val">20px</span>;</p>
+        </code>
+
+
+
+    
+
+</body>
+</html>
