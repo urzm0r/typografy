@@ -14,6 +14,7 @@
     --wt: #eee;
     --bl: #151515;
     --ex: rgba(0,0,255,0.25);
+    --ex-a: rgba(0,0,255,0.1);
 
     /* colors: code */
     --c-att: hsl(200, 73%, 75%);
@@ -27,7 +28,6 @@ main {
 
 body {
     background-color: var(--wt);
-    margin: calc(4 * var(--u));
 }
 
 p {
@@ -61,10 +61,16 @@ h1, h2, h3,h4 p:not([class^='c-']), code {
 h1, h2, h3,h4 {
     text-align: center;
     margin: calc(2 * var(--u));
+    margin-top: calc(4 * var(--u));
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: min(16vw, 6rem);
+}
+
+hr {
+    margin-left: calc(2 * var(--u));
+    margin-right: calc(2 * var(--u));
 }
 
 code {
@@ -105,6 +111,8 @@ code p, code span {
 #e-leading-2 {
     font-size: 1.625rem;
     line-height: 1;
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
 }
 
 #e-tracking-normal {
@@ -119,6 +127,10 @@ code p, code span {
     width: 100%;
     margin: calc(2 * var(--u));
     margin-top: 0;
+}
+
+.example-image:hover {
+    background-color: var(--ex-a);
 }
 
 #e-kerning-normal {
@@ -154,4 +166,14 @@ code p, code span {
     padding: 5px;
     width: 150vw;
     background-color: white;
+}
+
+@media only screen and (width > 800px) {
+    body {
+        margin: calc(4 * var(--u));
+    }
+
+    hr {
+        margin: 0;
+    }
 }
