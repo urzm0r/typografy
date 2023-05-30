@@ -168,6 +168,20 @@ code p, code span {
     background-color: white;
 }
 
+#deco {
+    width: var(--u);
+    height: 100%;
+    position: fixed;
+    left: var(--u);
+    top: 0;
+    background-color: var(--ex);
+    display: none;
+}
+
+#deco+#deco {
+    left: calc(var(--u) * 3)
+}
+
 @media only screen and (width > 800px) {
     body {
         margin: calc(4 * var(--u));
@@ -175,5 +189,8 @@ code p, code span {
 
     hr {
         margin: 0;
+    }
+    #deco {
+        display: block;
     }
 }
